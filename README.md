@@ -27,4 +27,5 @@ Potential updates to this tool in future projects...
 -Moving backwards in turn order (in case you need to back up)
 -GUI input so you don't have to add combatants directly in main
 -Initiative modifier tracking to resolve ties between combatants (?)
+-Colored text to more easily differentiate between ally and enemy(?)
 ------------------------------------------------------------------------------------------------------------------------------

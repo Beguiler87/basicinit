@@ -1,6 +1,6 @@
 ------------------------------------------------------------------------------------------------------------------------------
 Total Project Hours (6/4/2025 - ?)
-1.5
+4.5
 ------------------------------------------------------------------------------------------------------------------------------
 Notes:
 6/4/2025: Found basic code layout through google search. Copied into main.py to determine how it works. While functional, it
@@ -25,3 +25,18 @@ enemies list, advances to next combatant in list and repeats step 4 for them.
 combatant in the initiative order. If at any point the allies or enemies list is empty, the program prints a message to the
 console stating "All allies/enemies have been slain!"
 ------------------------------------------------------------------------------------------------------------------------------
+6/5/2025: Started on basic layout today. Used skeletal structure of example code for bulk of project, changing naming
+conventions to fit my own taste. Added sorting into ally/enemy lists. Did some googling and worked with ChatGPT for the first
+time. Not what I really wanted to do, but it works as a tool. I'm struggling to get the system to do what I want. Maybe I need
+to slow down and work on smaller chunks?
+That approach seems to be working. The basic structure is working the way I want it to. The system initializes, displays all
+of the combatants, their allegiance, and initiatives, then indicates the first turn and prompts for the next turn. Now to
+figure out how to remove a combatant on triggers. That should be interesting.
+Despite my initial distrust of ChatGPT, it seems to be at least a somewhat useful tool. Regarding everything that comes out of
+it, I'll have to remember the old adage "Trust, but verify."
+Ok, significant progress made. The system is functioning well so far. It completes all of the steps mentioned previously, as
+well as now removing slain combatants from the initiative order when the command 'slain' is entered. As an unintended bonus,
+the system also prints a message when all combatants have been removed. I don't intend that this should happen very often
+since it's unlikely that all combatants will be removed from combat.
+That being said, I may be adding more to this project than initially intended. I'd like to approach that 20 hour minimum if I
+can, since this is going so quickly. I'll have to think about that.
