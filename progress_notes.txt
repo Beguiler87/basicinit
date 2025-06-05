@@ -1,0 +1,27 @@
+------------------------------------------------------------------------------------------------------------------------------
+Total Project Hours (6/4/2025 - ?)
+1.5
+------------------------------------------------------------------------------------------------------------------------------
+Notes:
+6/4/2025: Found basic code layout through google search. Copied into main.py to determine how it works. While functional, it
+won't work as more than a skeleton for my end goals. When running the program, it prints out the round number, the list of 
+combatants with their initiative, a pointer to indicate whose turn it is, and a prompt for the user to press the enter key to
+advance the turn. However, when pressing enter, the program simply reprints the entire list and moves the pointer to the next
+combatant in the order. This is not how I want my version to function. I only want to print the list out once when the program
+is first started. After that, I only want to print out "It is insert-combatant-name's turn." each time the trigger is given.
+I'll have to find a way around this, but I think this will provide a decent basis to work from.
+Goals:
+-Remove round counter to simplify.
+-Modify code so that it only prints current combatant's turn when advancing.
+Intended Order of Operations
+1. Enter combatants
+2. Program sorts combatants by initiative in descending order, then sorts them into a list of allies and a list of enemies.
+3. Program displays initiative order in terminal.
+4. Program displays first turn ("It is Conan, the Librarian's turn!") and waits for further input.
+5. Upon input given to advance turn, index advances to next combatant in order and repeats step 4 for that combatant.
+6. Upon input given to remove combatant from combat, program removes them from the initiative list and corresponding ally or
+enemies list, advances to next combatant in list and repeats step 4 for them.
+7. Once the end of initiative order has been reached, input to advance the turn will return to the first available/living 
+combatant in the initiative order. If at any point the allies or enemies list is empty, the program prints a message to the
+console stating "All allies/enemies have been slain!"
+------------------------------------------------------------------------------------------------------------------------------
