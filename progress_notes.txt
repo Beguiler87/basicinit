@@ -40,3 +40,8 @@ the system also prints a message when all combatants have been removed. I don't 
 since it's unlikely that all combatants will be removed from combat.
 That being said, I may be adding more to this project than initially intended. I'd like to approach that 20 hour minimum if I
 can, since this is going so quickly. I'll have to think about that.
+------------------------------------------------------------------------------------------------------------------------------
+6/6/2025: I'm starting to feel a bit like Victor Frankenstein("It's ALIVE!") and a bit of impostor syndrome. This has come
+much further, much more quickly, than I had initially expected. I'm not sure if that's a good thing or a bad. The initiative
+tracker is pretty much where I had initially intended it to be, but I'm not anywhere near that 20 hour mark yet. I'll have to
+add more stuff...
