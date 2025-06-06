@@ -1,6 +1,7 @@
 # Primary file for Basic Initiative Tracker.
 import colorama
-colorama.init()
+from colorama import Fore, Back, init
+colorama.init(autoreset=True)
 # Warrior class defines combatants: name, initiative, which side of combat they belong to.
 class Warrior:
     def __init__(self, name, initiative, side):
@@ -29,12 +30,18 @@ class Tracker:
     # Displays combatants
     def order_list(self):
         for i, warrior in enumerate(self.warriors):
-            print(f"{warrior.name} is an {warrior.side} with an initiative of {warrior.initiative}")
+            if warrior.side == "ally":
+                print(f"{colorama.Fore.CYAN}{warrior.name} is an {warrior.side} with an initiative of {warrior.initiative}")
+            else:
+                print(f"{colorama.Fore.MAGENTA}{warrior.name} is an {warrior.side} with an initiative of {warrior.initiative}")
     # Displays current combatant's turnq
     def get_current_warrior(self):
         if self.warriors:
             current = self.warriors[self.current_warrior_index]
-            print(f"It is {current.name}'s turn.")
+            if current.side == "ally":
+                print(f"It is {colorama.Fore.CYAN}{current.name}{colorama.Fore.WHITE}'s turn.")
+            else:
+                print(f"It is {colorama.Fore.MAGENTA}{current.name}{colorama.Fore.WHITE}'s turn.")
         return None
     # Advances to next turn.
     def next_turn(self):
@@ -75,7 +82,7 @@ def main():
     while True:
         user_input = input("Awaiting input...")
         if not tracker.warriors:
-            print("There are no combatants. Combat has ceased.")
+            print(colorama.Fore.BLUE + "There are no combatants. Combat has ceased.")
             break
         if user_input == "slain":
             slain = tracker.warriors[tracker.current_warrior_index]
@@ -87,8 +94,13 @@ def main():
             del tracker.warriors[tracker.current_warrior_index]
             if tracker.warriors:
                 tracker.current_warrior_index %= len(tracker.warriors)
-                if tracker.next_turn() is False:
+                if len(tracker.allies) == 0:
+                    print(colorama.Fore.MAGENTA + colorama.Style.BRIGHT + "All allies have been slain! The GM has earned a nap and a cookie.")
                     break
+                elif len(tracker.enemies) == 0:
+                    print(colorama.Fore.CYAN + colorama.Style.BRIGHT + "All enemies have been slain! The players have earned waffles. WAFFLES, HO!")
+                    break
+                tracker.get_current_warrior()
         elif user_input == "remains":
             print(f"There are {len(tracker.warriors)} combatants: {len(tracker.allies)} allies and {len(tracker.enemies)} enemies.")
         elif user_input == "current":
@@ -100,11 +112,10 @@ def main():
             print("current: displays the current combatant")
             print("quit: ends combat")
         elif user_input == "quit":
-            print("Combat has ended.")
+            print(colorama.Fore.BLUE + "Combat has ended.")
             break
         else:
             tracker.next_turn()
-
 
 if __name__ == "__main__":
     main()

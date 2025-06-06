@@ -27,8 +27,6 @@ Potential updates to this tool in future projects...
 -Adding round tracking functionality
 -Moving backwards in turn order (in case you need to back up)
 -GUI input so you don't have to add combatants directly in main
--Count of all combatants, allies, enemies.
--Command to provide adjusted counts during combat.
 -Initiative modifier tracking to resolve ties between combatants (?)
 -Colored text to more easily differentiate between ally and enemy(?)
 ------------------------------------------------------------------------------------------------------------------------------

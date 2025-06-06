@@ -45,3 +45,12 @@ can, since this is going so quickly. I'll have to think about that.
 much further, much more quickly, than I had initially expected. I'm not sure if that's a good thing or a bad. The initiative
 tracker is pretty much where I had initially intended it to be, but I'm not anywhere near that 20 hour mark yet. I'll have to
 add more stuff...
+I've hit a snag. When a combatant dies, the system isn't indexing properly to the next combatant. I might be able to solve it
+by using a call for the current combatant instead of next_turn, but I've posted in the Discord to see if anyone can provide
+some helpful feedback. We'll see what happens.
+Ok, I managed to find a solution. I didn't get any feedback through the discord, but that's ok. I've managed to add some colors
+to make the terminal output more interesting. I deliberately avoided red and green (despite my personal preferences) so that 
+any users with red/green colorblindness aren't affected. I'm not sure how successful cyan and magenta will be for that, but I 
+don't really have anyone to test it for me. I'll just put the effort in and hope for the best. Working with colorama has been
+interesting. I was hoping to get multiple styles applied to some text, but that doesn't seem to be within colorama's
+capabilities. Beggars can't be choosers, lol. Maybe for the second iteration.
