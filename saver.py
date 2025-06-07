@@ -34,7 +34,7 @@ class Tracker:
             if warrior.side == "ally":
                 print(f"{colorama.Fore.CYAN}{warrior.name} is an {warrior.side} with an initiative of {warrior.initiative}")
             else:
-                print(f"{colorama.Fore.MAGENTA}{warrior.name} is an {warrior.side} with an initiative of {warrior.initiative}")
+                print(f"{colorama.Fore.YELLOW}{warrior.name} is an {warrior.side} with an initiative of {warrior.initiative}")
     # Displays current combatant's turnq
     def get_current_warrior(self):
         if self.warriors:
@@ -42,13 +42,13 @@ class Tracker:
             if current.side == "ally":
                 print(f"It is {colorama.Fore.CYAN}{current.name}{colorama.Fore.WHITE}'s turn.")
             else:
-                print(f"It is {colorama.Fore.MAGENTA}{current.name}{colorama.Fore.WHITE}'s turn.")
+                print(f"It is {colorama.Fore.YELLOW}{current.name}{colorama.Fore.WHITE}'s turn.")
         return None
     # Advances to next turn.
     def next_turn(self):
         # Checks to see if one side has been defeated or not.
         if len(self.allies) == 0:
-            print(colorama.Fore.MAGENTA + "All allies have been slain! The GM has earned a nap and a cookie.")
+            print(colorama.Fore.YELLOW + "All allies have been slain! The GM has earned a nap and a cookie.")
             return False
         elif len(self.enemies) == 0:
             print(colorama.Fore.CYAN + "All enemies have been slain! The players have earned waffles. WAFFLES, HO!")
@@ -96,7 +96,7 @@ def main():
             if tracker.warriors:
                 tracker.current_warrior_index %= len(tracker.warriors)
                 if len(tracker.allies) == 0:
-                    print(colorama.Fore.MAGENTA + colorama.Style.BRIGHT + "All allies have been slain! The GM has earned a nap and a cookie.")
+                    print(colorama.Fore.YELLOW + colorama.Style.BRIGHT + "All allies have been slain! The GM has earned a nap and a cookie.")
                     break
                 elif len(tracker.enemies) == 0:
                     print(colorama.Fore.CYAN + colorama.Style.BRIGHT + "All enemies have been slain! The players have earned waffles. WAFFLES, HO!")

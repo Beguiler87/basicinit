@@ -53,4 +53,10 @@ to make the terminal output more interesting. I deliberately avoided red and gre
 any users with red/green colorblindness aren't affected. I'm not sure how successful cyan and magenta will be for that, but I 
 don't really have anyone to test it for me. I'll just put the effort in and hope for the best. Working with colorama has been
 interesting. I was hoping to get multiple styles applied to some text, but that doesn't seem to be within colorama's
-capabilities. Beggars can't be choosers, lol. Maybe for the second iteration.
+capabilities. Beggars can't be choosers, lol. Maybe for the second iteration. I think I need to work on adding colors to
+announcement statements ("so-and-so has been slain!" etc.)
+------------------------------------------------------------------------------------------------------------------------------
+6/7/2025: Messed around with colors a bit today. Wasn't totally happy with the cyan/magenta color pallette. Colorama doesn't 
+have a lot of color choices, so I may have to look for another option to replace it. It's also somewhat finicky inhow it must
+be implemented to get colors where you want them, so I may search for an additional option later.
+------------------------------------------------------------------------------------------------------------------------------
